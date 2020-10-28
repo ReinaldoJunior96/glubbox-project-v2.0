@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EstoqueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('examples.dashboard');
 });
+
+/*
+ * Estoque rotas
+*/
+Route::get('/estoque', [EstoqueController::class, 'estoqueFarmacia']);
+Route::get('/estoque/produto/{produto}', [EstoqueController::class, 'editProduto'])
+    ->name('produto.edit');
+/*
+ *=====================================================*
+*/

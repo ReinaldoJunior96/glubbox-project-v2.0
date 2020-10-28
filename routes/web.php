@@ -14,15 +14,28 @@ use App\Http\Controllers\EstoqueController;
 */
 
 Route::get('/', function () {
-    return view('examples.dashboard');
-});
+    return view('dashboard');
+})->name('dashboard');
 
-/*
- * Estoque rotas
-*/
-Route::get('/estoque', [EstoqueController::class, 'estoqueFarmacia']);
-Route::get('/estoque/produto/{produto}', [EstoqueController::class, 'editProduto'])
-    ->name('produto.edit');
+/* Estoque rotas */
+Route::get('/estoqueFarmacia/farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('estoqueFarmacia.farmacia.view');
+Route::get('/estoqueFarmacia/estoqueDiversos', [EstoqueController::class, 'estoqueDiversos'])->name('estoqueFarmacia.estoqueDiversos.view');
+Route::get('/estoqueFarmacia/produto/{produto}', [EstoqueController::class, 'editProduto'])->name('produto.view');
+
+
+Route::post('/estoqueFarmacia/farmacia', [EstoqueController::class, 'novoProdutoFarmacia'])->name('produto.faramacia.cadastro');
+Route::post('/estoqueFarmacia/estoqueDiversos', [EstoqueController::class, 'novoProdutoDiversos'])->name('produto.estoqueDiversos.cadastro');
+Route::put('/estoqueFarmacia/produto/{produto}', [EstoqueController::class, 'alterarProduto'])->name('produto.edit');
+Route::delete('/estoqueFarmacia/produto/{produto}', [EstoqueController::class, 'removerProduto'])->name('produto.delete');
 /*
  *=====================================================*
 */
+
+
+
+
+
+
+
+
+

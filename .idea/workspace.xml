@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34cde856-fc44-45bf-8ead-7861c0fcd428" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estoque/estoque.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estoque/produto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estoqueFarmacia/produto.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +193,7 @@
       <workItem from="1603825466966" duration="276000" />
       <workItem from="1603825900394" duration="16938000" />
       <workItem from="1603892529755" duration="51000" />
-      <workItem from="1603892664785" duration="322000" />
+      <workItem from="1603892664785" duration="6659000" />
     </task>
     <servers />
   </component>
@@ -210,9 +217,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603825750197" />
-    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1603844748652">
+    <state width="1493" height="204" key="GridCell.Tab.0.bottom" timestamp="1603893202184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1603844748652" />
+    <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
+    <state width="1493" height="204" key="GridCell.Tab.0.center" timestamp="1603893202184">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
+    <state width="1493" height="204" key="GridCell.Tab.0.left" timestamp="1603893202183">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603893202183" />
+    <state width="1493" height="204" key="GridCell.Tab.0.right" timestamp="1603893202184">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
+    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1603912316385">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1603912316385" />
   </component>
 </project>

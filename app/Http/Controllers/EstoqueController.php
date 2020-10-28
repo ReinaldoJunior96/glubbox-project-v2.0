@@ -14,11 +14,12 @@ class EstoqueController extends BaseController
 
     public function estoqueFarmacia()
     {
-        return view('estoque.estoque',['produtos' => Estoque::all()]);
+        return view('estoqueFarmacia.estoque',['produtos' => Estoque::all()]);
+
     }
 
     public function editProduto($id)
     {
-        return view('estoque.produto', ['produto' => Estoque::find($id)]);
+        return view('estoqueFarmacia.produto', ['produto' => Estoque::find($id)]);
     }
 }

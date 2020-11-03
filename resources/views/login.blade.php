@@ -1,33 +1,22 @@
-<!--
-=========================================================
-Material Dashboard - v2.1.2
-=========================================================
-
-Product Page: https://www.creative-tim.com/product/material-dashboard
-Copyright 2020 Creative Tim (https://www.creative-tim.com)
-Coded by Creative Tim
-
-=========================================================
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../../../public/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../../../public/assets/img/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="../../public/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="{{ asset('images/asteroid.png') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>
-        Material Dashboard by Creative Tim
+        Glubbox
     </title>
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport'/>
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     <!-- CSS Files -->
-    <link href="../../../public/assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+    <link href="{{ asset('assets/css/material-dashboard.css')  }}" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../../../public/assets/demo/demo.css" rel="stylesheet" />
+    <link href="{{ asset('assets/demo/demo.css')  }}" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -107,7 +96,8 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="navbar-wrapper">
                     <a class="navbar-brand" href="javascript:;">Upgrade to PRO</a>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon icon-bar"></span>
                     <span class="navbar-toggler-icon icon-bar"></span>
@@ -133,7 +123,8 @@ The above copyright notice and this permission notice shall be included in all c
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="material-icons">notifications</i>
                                 <span class="notification">5</span>
                                 <p class="d-lg-none d-md-block">
@@ -149,7 +140,8 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
                                 <i class="material-icons">person</i>
                                 <p class="d-lg-none d-md-block">
                                     Account
@@ -174,7 +166,8 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card">
                             <div class="card-header card-header-primary">
                                 <h4 class="card-title">Material Dashboard PRO</h4>
-                                <p class="card-category">Are you looking for more components? Please check our Premium Version of Material Dashboard.</p>
+                                <p class="card-category">Are you looking for more components? Please check our Premium
+                                    Version of Material Dashboard.</p>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive table-upgrade">
@@ -208,7 +201,9 @@ The above copyright notice and this permission notice shall be included in all c
                                             <td class="text-center"><i class="fa fa-check text-success"></i></td>
                                         </tr>
                                         <tr>
-                                            <td>DataTables, VectorMap, SweetAlert, Wizard, jQueryValidation, FullCalendar etc...</td>
+                                            <td>DataTables, VectorMap, SweetAlert, Wizard, jQueryValidation,
+                                                FullCalendar etc...
+                                            </td>
                                             <td class="text-center"><i class="fa fa-times text-danger"></i></td>
                                             <td class="text-center"><i class="fa fa-check text-success"></i></td>
                                         </tr>
@@ -230,10 +225,13 @@ The above copyright notice and this permission notice shall be included in all c
                                         <tr>
                                             <td class="text-center"></td>
                                             <td class="text-center">
-                                                <a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a>
+                                                <a href="#" class="btn btn-round btn-fill btn-default disabled">Current
+                                                    Version</a>
                                             </td>
                                             <td class="text-center">
-                                                <a target="_blank" href="http://www.creative-tim.com/product/material-dashboard-pro/upgrade.blade.php?ref=md-free-upgrade-live" class="btn btn-round btn-fill btn-info">Upgrade to PRO</a>
+                                                <a target="_blank"
+                                                   href="http://www.creative-tim.com/product/material-dashboard-pro/upgrade.blade.php?ref=md-free-upgrade-live"
+                                                   class="btn btn-round btn-fill btn-info">Upgrade to PRO</a>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -275,7 +273,8 @@ The above copyright notice and this permission notice shall be included in all c
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
-                    </script>, made with <i class="material-icons">favorite</i> by
+                    </script>
+                    , made with <i class="material-icons">favorite</i> by
                     <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
                 </div>
             </div>
@@ -324,7 +323,8 @@ The above copyright notice and this permission notice shall be included in all c
                 </a>
             </li>
             <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+                <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank"
+                   class="btn btn-primary btn-block">Free Download</a>
             </li>
             <!-- <li class="header-title">Want more components?</li>
                 <li class="button-container">
@@ -333,17 +333,22 @@ The above copyright notice and this permission notice shall be included in all c
                     </a>
                 </li> -->
             <li class="button-container">
-                <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+                <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html"
+                   target="_blank" class="btn btn-default btn-block">
                     View Documentation
                 </a>
             </li>
             <li class="button-container github-star">
-                <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard"
+                   data-icon="octicon-star" data-size="large" data-show-count="true"
+                   aria-label="Star ntkme/github-buttons on GitHub">Star</a>
             </li>
             <li class="header-title">Thank you for 95 shares!</li>
             <li class="button-container text-center">
-                <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-                <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
+                <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45
+                </button>
+                <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50
+                </button>
                 <br>
                 <br>
             </li>
@@ -351,51 +356,50 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
 </div>
 <!--   Core JS Files   -->
-<script src="../../../public/assets/js/core/jquery.min.js"></script>
-<script src="../../../public/assets/js/core/popper.min.js"></script>
-<script src="../../../public/assets/js/core/bootstrap-material-design.min.js"></script>
-<script src="../../../public/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="{{ asset('assets/js/core/jquery.min.js')  }}"></script>
+<script src="{{ asset('assets/js/core/popper.min.js')  }}"></script>
+<script src="{{ asset('assets/js/core/bootstrap-material-design.min.js')  }}"></script>
+<script src="{{ asset('assets/js/plugins/perfect-scrollbar.jquery.min.js')  }}"></script>
+
 <!-- Plugin for the momentJs  -->
-<script src="../../../public/assets/js/plugins/moment.min.js"></script>
+<script src="{{ asset('assets/js/plugins/moment.min.js')  }}"></script>
 <!--  Plugin for Sweet Alert -->
-<script src="../../../public/assets/js/plugins/sweetalert2.js"></script>
+<script src="{{ asset('assets/js/plugins/sweetalert2.js')  }}"></script>
 <!-- Forms Validations Plugin -->
-<script src="../../../public/assets/js/plugins/jquery.validate.min.js"></script>
+<script src="{{ asset('assets/js/plugins/jquery.validate.min.js')  }}"></script>
 <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
-<script src="../../../public/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+<script src="{{ asset('assets/js/plugins/jquery.bootstrap-wizard.js')  }}"></script>
 <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-<script src="../../../public/assets/js/plugins/bootstrap-selectpicker.js"></script>
+<script src="{{ asset('assets/js/plugins/bootstrap-selectpicker.js')  }}"></script>
 <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-<script src="../../../public/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+<script src="{{ asset('assets/js/plugins/bootstrap-datetimepicker.min.js')  }}"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-<script src="../../../public/assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="{{ asset('assets/js/plugins/jquery.dataTables.min.js')  }}"></script>
 <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-<script src="../../../public/assets/js/plugins/bootstrap-tagsinput.js"></script>
+<script src="{{ asset('assets/js/plugins/bootstrap-tagsinput.js')  }}"></script>
 <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-<script src="../../../public/assets/js/plugins/jasny-bootstrap.min.js"></script>
+<script src="{{ asset('assets/js/plugins/jasny-bootstrap.min.js')  }}"></script>
 <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-<script src="../../../public/assets/js/plugins/fullcalendar.min.js"></script>
+<script src="{{ asset('assets/js/plugins/fullcalendar.min.js')  }}"></script>
 <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
-<script src="../../../public/assets/js/plugins/jquery-jvectormap.js"></script>
+<script src="{{ asset('assets/js/plugins/jquery-jvectormap.js')  }}"></script>
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="../../../public/assets/js/plugins/nouislider.min.js"></script>
+<script src="{{ asset('assets/js/plugins/nouislider.min.js')  }}"></script>
 <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 <!-- Library for adding dinamically elements -->
-<script src="../../../public/assets/js/plugins/arrive.min.js"></script>
-<!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<script src="{{ asset('assets/js/plugins/arrive.min.js')  }}"></script>
 <!-- Chartist JS -->
-<script src="../../../public/assets/js/plugins/chartist.min.js"></script>
+<script src="{{ asset('assets/js/plugins/chartist.min.js')  }}"></script>
 <!--  Notifications Plugin    -->
-<script src="../../../public/assets/js/plugins/bootstrap-notify.js"></script>
+<script src="{{ asset('assets/js/plugins/bootstrap-notify.js')  }}"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="../../../public/assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+<script src="{{ asset('assets/js/material-dashboard.js?v=2.1.2')  }}" type="text/javascript"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script src="../../../public/assets/demo/demo.js"></script>
+<script src="{{ asset('assets/demo/demo.js')  }}"></script>
 <script>
-    $(document).ready(function() {
-        $().ready(function() {
+    $(document).ready(function () {
+        $().ready(function () {
             $sidebar = $('.sidebar');
 
             $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -415,7 +419,7 @@ The above copyright notice and this permission notice shall be included in all c
 
             }
 
-            $('.fixed-plugin a').click(function(event) {
+            $('.fixed-plugin a').click(function (event) {
                 // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
                 if ($(this).hasClass('switch-trigger')) {
                     if (event.stopPropagation) {
@@ -426,7 +430,7 @@ The above copyright notice and this permission notice shall be included in all c
                 }
             });
 
-            $('.fixed-plugin .active-color span').click(function() {
+            $('.fixed-plugin .active-color span').click(function () {
                 $full_page_background = $('.full-page-background');
 
                 $(this).siblings().removeClass('active');
@@ -447,7 +451,7 @@ The above copyright notice and this permission notice shall be included in all c
                 }
             });
 
-            $('.fixed-plugin .background-color .badge').click(function() {
+            $('.fixed-plugin .background-color .badge').click(function () {
                 $(this).siblings().removeClass('active');
                 $(this).addClass('active');
 
@@ -458,7 +462,7 @@ The above copyright notice and this permission notice shall be included in all c
                 }
             });
 
-            $('.fixed-plugin .img-holder').click(function() {
+            $('.fixed-plugin .img-holder').click(function () {
                 $full_page_background = $('.full-page-background');
 
                 $(this).parent('li').siblings().removeClass('active');
@@ -468,7 +472,7 @@ The above copyright notice and this permission notice shall be included in all c
                 var new_image = $(this).find("img").attr('src');
 
                 if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
-                    $sidebar_img_container.fadeOut('fast', function() {
+                    $sidebar_img_container.fadeOut('fast', function () {
                         $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
                         $sidebar_img_container.fadeIn('fast');
                     });
@@ -477,7 +481,7 @@ The above copyright notice and this permission notice shall be included in all c
                 if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
                     var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
 
-                    $full_page_background.fadeOut('fast', function() {
+                    $full_page_background.fadeOut('fast', function () {
                         $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
                         $full_page_background.fadeIn('fast');
                     });
@@ -496,7 +500,7 @@ The above copyright notice and this permission notice shall be included in all c
                 }
             });
 
-            $('.switch-sidebar-image input').change(function() {
+            $('.switch-sidebar-image input').change(function () {
                 $full_page_background = $('.full-page-background');
 
                 $input = $(this);
@@ -528,7 +532,7 @@ The above copyright notice and this permission notice shall be included in all c
                 }
             });
 
-            $('.switch-sidebar-mini input').change(function() {
+            $('.switch-sidebar-mini input').change(function () {
                 $body = $('body');
 
                 $input = $(this);
@@ -543,7 +547,7 @@ The above copyright notice and this permission notice shall be included in all c
 
                     $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
 
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $('body').addClass('sidebar-mini');
 
                         md.misc.sidebar_mini_active = true;
@@ -551,12 +555,12 @@ The above copyright notice and this permission notice shall be included in all c
                 }
 
                 // we simulate the window Resize so the charts will get updated in realtime.
-                var simulateWindowResize = setInterval(function() {
+                var simulateWindowResize = setInterval(function () {
                     window.dispatchEvent(new Event('resize'));
                 }, 180);
 
                 // we stop the simulation of Window Resize after the animations are completed
-                setTimeout(function() {
+                setTimeout(function () {
                     clearInterval(simulateWindowResize);
                 }, 1000);
 

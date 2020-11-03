@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34cde856-fc44-45bf-8ead-7861c0fcd428" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +194,7 @@
       <workItem from="1603995345810" duration="19000" />
       <workItem from="1604070862757" duration="6000000" />
       <workItem from="1604093344583" duration="269000" />
+      <workItem from="1604409463807" duration="2552000" />
     </task>
     <servers />
   </component>
@@ -234,10 +234,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
-    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1603935123096">
+    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1604412688924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1603935123096" />
+    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604412688924" />
     <state x="311" y="7" key="SettingsEditor" timestamp="1603931784403">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

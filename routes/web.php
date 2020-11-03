@@ -17,7 +17,9 @@ use App\Http\Controllers\EstoqueController;
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
-
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
 /* Estoque rotas */
 Route::get('/estoqueFarmacia/farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('estoqueFarmacia.farmacia.view');
 Route::get('/estoqueFarmacia/estoqueDiversos', [EstoqueController::class, 'estoqueDiversos'])->name('estoqueFarmacia.estoqueDiversos.view');

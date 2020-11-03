@@ -17,6 +17,12 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('assets/demo/demo.css')  }}" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
+    <style>
+        #parte {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body class="">
@@ -28,7 +34,7 @@
           Tip 2: you can also add an image using data-image tag
       -->
         <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-               Gblubbox
+                Gblubbox
             </a></div>
         <div class="sidebar-wrapper">
             <ul class="nav">
@@ -209,7 +215,7 @@
                                 </form>
                             </div>
                             <hr>
-                            <div class="col-md-12">
+                            <div class="col-md-12" id="parte">
                                 <div class="card card-plain">
                                     <div class="card-header card-header-primary">
                                         <h4 class="card-title mt-0">Produto & Materiais</h4>
@@ -232,12 +238,13 @@
                                                 <tbody>
                                                 @foreach($produtos as $p)
                                                     <tr>
-                                                        <td>{{$p->produto_e}}</td>
-                                                        <td>{{$p->quantidade_e}}</td>
+                                                        <td>{{ $p->produto_e }}</td>
+                                                        <td>{{ $p->quantidade_e}}</td>
                                                         <td>
                                                             <button type="button" rel="tooltip" title="Editar Produto"
                                                                     class="btn btn-primary btn-link btn-sm">
-                                                                <a href="{{ route('produto.edit', ['produto'=> $p]) }}"><i class="material-icons">edit</i></a>
+                                                                <a href="{{ route('produto.view', ['produto' => $p->id_estoque]) }}"><i
+                                                                        class="material-icons">edit</i></a>
                                                             </button>
                                                             <button type="button" rel="tooltip" title="Deleter Produto"
                                                                     class="btn btn-danger btn-link btn-sm">
@@ -270,6 +277,7 @@
     </div>
 </div>
 <!--   Core JS Files   -->
+
 <script src="{{ asset('assets/js/core/jquery.min.js')  }}"></script>
 <script src="{{ asset('assets/js/core/popper.min.js')  }}"></script>
 <script src="{{ asset('assets/js/core/bootstrap-material-design.min.js')  }}"></script>
@@ -511,6 +519,11 @@
             }
         });
     });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#parte').fadeIn("slow").css("display", "block");
+    })
 </script>
 </body>
 

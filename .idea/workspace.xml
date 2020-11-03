@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="34cde856-fc44-45bf-8ead-7861c0fcd428" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/componentes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/componentes/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/componentes/nav.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,18 +157,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/estoque" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exclularavel" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views\estoque" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\glubbox-project-v2.0\public" />
       <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views\estoque" />
     </key>
   </component>
   <component name="RunManager">
@@ -193,6 +192,9 @@
       <workItem from="1603892529755" duration="51000" />
       <workItem from="1603892664785" duration="6659000" />
       <workItem from="1603931755201" duration="3307000" />
+      <workItem from="1603995345810" duration="19000" />
+      <workItem from="1604070862757" duration="6000000" />
+      <workItem from="1604093344583" duration="269000" />
     </task>
     <servers />
   </component>
@@ -212,10 +214,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1603825750197">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604093614578">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603825750197" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604093614578" />
     <state width="1493" height="204" key="GridCell.Tab.0.bottom" timestamp="1603893202184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

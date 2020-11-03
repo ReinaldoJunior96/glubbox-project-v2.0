@@ -140,7 +140,6 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{ asset('images/asteroid.png') }}" width="200" class="rounded mx-auto d-block mt-5" alt="...">
                 </div>
             </div>
         </div>

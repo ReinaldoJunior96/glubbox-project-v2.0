@@ -16,6 +16,9 @@ class EstoqueController extends BaseController
     public function estoqueFarmacia()
     {
         $produtos = DB::table('tbl_estoque')->get();
+        $dados = [
+            
+        ];
         return view('estoqueFarmacia.estoque',['produtos' => $produtos]);
     }
     public function estoqueDiversos()

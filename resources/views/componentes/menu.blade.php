@@ -17,7 +17,7 @@
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{ route('estoqueFarmacia.farmacia.view') }}">
+                <a class="nav-link" href="{{ route('view.estoque.farmacia') }}">
                     <i class="material-icons">local_pharmacy</i>
                     <p>Estoque Farmacêutico</p>
                 </a>
@@ -56,6 +56,12 @@
                 <a class="nav-link" href="examples/rtl.blade.php">
                     <i class="material-icons">language</i>
                     <p>RTL Support</p>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('realizar.logout') }}">
+                    <i class="material-icons">settings_power</i>
+                    <p>Sair</p>
                 </a>
             </li>
         </ul>

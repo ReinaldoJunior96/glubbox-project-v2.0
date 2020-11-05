@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EstoqueController;
+use App\Http\Controllers\{EstoqueController, AuthController};
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +14,26 @@ use App\Http\Controllers\EstoqueController;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('dashboard');
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+/* route raiz */
+Route::get('/', fn() => view('dashboard'))->name('dashboard')->middleware('auth');
+
+/* route de login */
+Route::get('/login', fn() => view('login'))->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('realizar.login');
+Route::get('/logout', [AuthController::class, 'logoutUser'])->name('realizar.logout');
+
+/* dashboard retornando dados*/
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+
 /* Estoque rotas */
-Route::get('/estoqueFarmacia/farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('estoqueFarmacia.farmacia.view');
-Route::get('/estoqueFarmacia/estoqueDiversos', [EstoqueController::class, 'estoqueDiversos'])->name('estoqueFarmacia.estoqueDiversos.view');
-Route::get('/estoqueFarmacia/produto/{produto}', [EstoqueController::class, 'editProduto'])->name('produto.view');
+Route::prefix('estoque')->group(function(){
+    Route::get('farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('view.estoque.farmacia')->middleware('auth');
+    Route::get('diversos', [EstoqueController::class, 'estoqueDiversos'])->name('view.estoque.diversos')->middleware('auth');
+    Route::get('produto/{produto}', [EstoqueController::class, 'editProduto'])->name('produto.view')->middleware('auth');
+});
+
+
+
 
 
 Route::post('/estoqueFarmacia/farmacia', [EstoqueController::class, 'novoProdutoFarmacia'])->name('produto.faramacia.cadastro');

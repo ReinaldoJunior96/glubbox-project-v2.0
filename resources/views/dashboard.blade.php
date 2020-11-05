@@ -84,7 +84,7 @@
                                     <i class="fas fa-box-open"></i>
                                 </div>
                                 <p class="card-category">Produtos Cadastrados</p>
-                                <h3 class="card-title">40
+                                <h3 class="card-title">{{$dados['produtos']}}
                                 </h3>
                             </div>
                             <div class="card-footer">
@@ -102,7 +102,7 @@
                                     <i class="fas fa-file-export"></i>
                                 </div>
                                 <p class="card-category">Saídas Registradas</p>
-                                <h3 class="card-title">32453</h3>
+                                <h3 class="card-title">{{$dados['saidas']}}</h3>
                             </div>
                             <div class="card-footer">
                                 <div class="stats">
@@ -117,7 +117,7 @@
                                     <i class="fas fa-people-carry"></i>
                                 </div>
                                 <p class="card-category">Setores Cadastrados</p>
-                                <h3 class="card-title">75</h3>
+                                <h3 class="card-title">{{ $dados['setores'] }}</h3>
                             </div>
                             <div class="card-footer">
                                 <div class="stats">
@@ -132,7 +132,7 @@
                                     <i class="fas fa-users"></i>
                                 </div>
                                 <p class="card-category">Fornecedores</p>
-                                <h3 class="card-title">+245</h3>
+                                <h3 class="card-title">{{$dados['fornecedores']}}</h3>
                             </div>
                             <div class="card-footer">
                                 <div class="stats">

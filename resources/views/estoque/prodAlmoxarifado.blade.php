@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="../../../public/assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>
-        Material Dashboard by Creative Tim
+        Gluub Box
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport'/>
     <!--     Fonts and icons     -->
@@ -17,25 +17,21 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('assets/demo/demo.css')  }}" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
+    <link rel="stylesheet" href="{{ asset('assets/css/gluubstyle.css') }}">
     <style>
-        #parte {
-            display: none;
-        }
-    </style>
 
+    </style>
 </head>
 
 <body class="">
 <div class="wrapper ">
-
     @include('componentes.menu');
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <img src="{{ asset('images/box.png') }}" class="rounded mx-auto d-block" width="40" alt="..."><a
-                        class="navbar-brand" href="javascript:;"> Estoque Farmacêutico</a>
+                    <a class="navbar-brand" href="javascript:;"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -68,10 +64,9 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                {{--                  <a class="dropdown-item" href="#">Profile</a>--}}
-                                {{--                  <a class="dropdown-item" href="#">Settings</a>--}}
-                                {{--                  <div class="dropdown-divider"></div>--}}
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i> Sair </a>
+                                <a class="dropdown-item" href="{{ route('realizar.logout') }}">
+                                    <i class="material-icons">settings_power</i> Sair
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -79,135 +74,71 @@
             </div>
         </nav>
         <!-- End Navbar -->
+
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title">Cadastro</h4>
-                                <p class="card-category">Área para cadastro de produtos e materiais </p>
+                                <h4 class="card-title">Materiais</h4>
+                                <p class="card-category">Cadastrados no estoque do Almoxarifado</p>
                             </div>
                             <div class="card-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Nome Comercial</label>
-                                                <input type="text" class="form-control" name="nome_comercial">
+                                <div class="col-md-12" id="parte">
+                                    <div class="card card-plain">
+                                        @if(isset($produtos))
+                                            <div class="card-body">
+                                                <div class="table-responsive" id="table-delay">
+                                                    <table id="example" class="table table-hover text-md-center">
+                                                        <thead class="">
+                                                        <th> Nome Comercial</th>
+                                                        <th> Quantidade</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        </thead>
+                                                        <tbody>
+                                                        @foreach($produtos as $p)
+                                                            <tr>
+                                                                <td>{{ $p->produto_e }}</td>
+                                                                <td>{{ $p->quantidade_e}}</td>
+                                                                <td>
+                                                                    <button type="button" rel="tooltip"
+                                                                            title="Editar Produto"
+                                                                            class="btn btn-primary btn-link btn-sm">
+                                                                        <a href="{{ route('estoque.produto', ['produto' => $p->id_estoque]) }}"><i
+                                                                                class="material-icons">edit</i></a>
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <form
+                                                                        action="{{ route('rem.produto', ['produto' => $p->id_estoque]) }}"
+                                                                        method="POST">
+                                                                        @csrf
+                                                                        @method('delete')
+                                                                        <button type="submit" rel="tooltip"
+                                                                                title="Deleter Produto"
+                                                                                class="btn btn-danger btn-link btn-sm">
+                                                                            <i class="material-icons">close</i>
+                                                                        </button>
+                                                                    </form>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Princípio Ativo</label>
-                                                <input type="text" class="form-control" name="principio_ativo">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Apresentação</label>
-                                                <input type="text" class="form-control" name="apresentacao">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Forma Farmacêutica</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Concentração(%):</label>
-                                                <input type="email" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Estoque Mínimo</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Quantidade</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Valor Unitário (R$)</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-success pull-right">Cadastrar</button>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                            <hr>
-                            <div class="col-md-12" id="parte">
-                                <div class="card card-plain">
-                                    <div class="card-header card-header-primary">
-                                        <h4 class="card-title mt-0">Produto & Materiais</h4>
-                                        {{--                                <p class="card-category"> Here is a subtitle for this table</p>--}}
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table id="example" class="table table-hover text-md-center">
-                                                <thead class="">
-                                                <th>
-                                                    Nome Comercial
-                                                </th>
-                                                <th>
-                                                    Quantidade
-                                                </th>
-                                                <th>
-
-                                                </th>
-                                                </thead>
-                                                <tbody>
-                                                @foreach($produtos as $p)
-                                                    <tr>
-                                                        <td>{{ $p->produto_e }}</td>
-                                                        <td>{{ $p->quantidade_e}}</td>
-                                                        <td>
-                                                            <button type="button" rel="tooltip" title="Editar Produto"
-                                                                    class="btn btn-primary btn-link btn-sm">
-                                                                <a href="{{ route('produto.view', ['produto' => $p->id_estoque]) }}"><i
-                                                                        class="material-icons">edit</i></a>
-                                                            </button>
-                                                            <button type="button" rel="tooltip" title="Deleter Produto"
-                                                                    class="btn btn-danger btn-link btn-sm">
-                                                                <i class="material-icons">close</i>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="copyright float-right">
-                    &copy;
-                    Reinaldo Junior Dev
-                </div>
-            </div>
-        </footer>
+        @include('componentes.footer')
     </div>
 </div>
 <!--   Core JS Files   -->
@@ -456,7 +387,7 @@
 </script>
 <script>
     $(document).ready(function () {
-        $('#parte').fadeIn("slow").css("display", "block");
+        $('#table-delay').fadeIn("slow").css("display", "block");
     })
 </script>
 </body>

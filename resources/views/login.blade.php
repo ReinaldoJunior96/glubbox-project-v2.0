@@ -3,46 +3,38 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="apple-touch-icon" sizes="76x76" href="../../public/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="{{ asset('images/asteroid.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/glogo.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>
-        Glubbox
+        Box
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport'/>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- CSS Files -->
     <link href="{{ asset('assets/css/material-dashboard.css')  }}" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('assets/demo/demo.css')  }}" rel="stylesheet"/>
-    <style>
-        .roboto-condensed {
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-    </style>
+    <!-- Gluub style css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/gluubstyle.css') }}">
 
 </head>
 
 <body class="">
 <div class="col-md-4 ml-auto mr-auto ml-auto" style="margin-top: 100px">
     <div class="card">
-        <div class="card-header card-header-primary">
-            <h4 class="card-title" style="font-family: 'Cinzel Decorative', cursive;">Glubbox</h4>
-            <p class="card-category"></p>
-        </div>
         <div class="card-body">
             <div class="text-center">
-                <img src="{{ asset('images/asteroid.png') }}" width="120" class="rounded" alt="...">
+                <img src="{{ asset('images/logo-box.png') }}" width="150" class="rounded" alt="...">
             </div>
             <form method="POST" action="{{ route('realizar.login') }}" class="p-1 mt-3">
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="bmd-label-floating ml-3"><i class="fas fa-user"></i> Usuário</label>
+                            <label class="bmd-label-floating ml-3 "><i class="fas fa-user text-primary"></i> Usuário</label>
                             <input type="text" class="form-control" value="reinaldojunior272@gmail.com" name="email">
                         </div>
                     </div>
@@ -50,12 +42,12 @@
                 <div class="row mt-2">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label class="bmd-label-floating ml-3"><i class="fas fa-key"></i> Senha</label>
+                            <label class="bmd-label-floating ml-3"><i class="fas fa-key text-primary"></i> Senha</label>
                             <input type="password" class="form-control" name="password">
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary pull-right">Entrar</button>
+                <button type="submit" class="btn btn-primary pull-right roboto-condensed col-4">Entrar</button>
                 <div class="clearfix"></div>
             </form>
         </div>
@@ -274,6 +266,11 @@
 
             });
         });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#loading').css("display", "block");
     });
 </script>
 </body>

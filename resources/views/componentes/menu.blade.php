@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="danger" data-background-color="white">
+<div class="sidebar" data-color="purple" data-background-color="danger">
     <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -6,62 +6,83 @@
   -->
     <div class="logo">
         <a href="" class="simple-text logo-normal">
-            <img src="{{ asset('images/asteroid.png') }}" width="40" class="rounded mx-auto d-block" alt="..."> Glubbox
-        </a></div>
+            <img src="{{ asset('images/logo-box.png') }}" width="150" class="rounded mx-auto d-block" alt="...">
+        </a>
+    </div>
     <div class="sidebar-wrapper">
         <ul class="nav">
-            <li class="nav-item active  ">
+            <li class="nav-item">
                 <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="material-icons">dashboard</i>
-                    <p>Resumo</p>
+                    <i class="material-icons text-primary">dashboard</i>
+                    <p>Painel</p>
+                </a>
+            </li>
+            <hr>
+            <h6 class="text-center roboto-condensed">Estoque</h6>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                    <i class="material-icons text-primary">add_circle</i>
+                    <p>Cadastro</p>
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{ route('view.estoque.farmacia') }}">
-                    <i class="material-icons">local_pharmacy</i>
-                    <p>Estoque Farmacêutico</p>
+                <a class="nav-link" href="{{ route('estoque.farmacia') }}">
+                    <i class="material-icons text-primary">local_pharmacy</i>
+                    <p>Farmacia</p>
                 </a>
             </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('estoque.almoxarifado') }}">
+                    <i class="material-icons text-primary">all_inbox</i>
+                    <p>Almoxarifado</p>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                    <i class="material-icons text-primary">local_mall</i>
+                    <p>Compras</p>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                    <i class="material-icons text-primary">report</i>
+                    <p>Relatório</p>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                    <i class="material-icons text-primary">present_to_all</i>
+                    <p>Distribuição</p>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                    <i class="material-icons text-primary">share</i>
+                    <p>Setores</p>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                    <i class="material-icons text-primary">people</i>
+                    <p>Fornecedores</p>
+                </a>
+            </li>
+            <hr>
             <li class="nav-item ">
                 <a class="nav-link" href="">
-                    <i class="material-icons">all_inbox</i>
-                    <p>Estoque Diversos</p>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="examples/typography.blade.php">
-                    <i class="material-icons">library_books</i>
-                    <p>Typography</p>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="examples/icons.blade.php">
-                    <i class="material-icons">bubble_chart</i>
-                    <p>Icons</p>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="examples/map.blade.php">
-                    <i class="material-icons">location_ons</i>
-                    <p>Maps</p>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="examples/notifications.blade.php">
-                    <i class="material-icons">notifications</i>
-                    <p>Notifications</p>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="examples/rtl.blade.php">
-                    <i class="material-icons">language</i>
-                    <p>RTL Support</p>
+                    <i class="material-icons"></i>
+                    <p></p>
                 </a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="{{ route('realizar.logout') }}">
-                    <i class="material-icons">settings_power</i>
-                    <p>Sair</p>
+                    <i class="material-icons"></i>
+                    <p></p>
                 </a>
             </li>
         </ul>

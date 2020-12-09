@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+.roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.gradient-bg{
+    background: linear-gradient(to right, #5D1766, #BC6EA7);
+}
+
+#table-delay {
+    display: none ;
+}
+

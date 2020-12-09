@@ -2,17 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="../../public/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="{{ asset('images/glogo.png') }}">
+    <link rel="icon" type="image/png" href="../../../public/assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>
-        G Box
+        Material Dashboard by Creative Tim
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport'/>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="{{ asset('assets/css/material-dashboard.css')  }}" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -21,15 +20,14 @@
 
 <body class="">
 <div class="wrapper ">
-    @include('componentes.menu')
+    @include('componentes.menu');
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;"> <i class="material-icons text-secondary">dashboard</i>Resumo
-                        Administrativo
-                    </a>
+                    <img src="{{ asset('images/box.png') }}" class="rounded mx-auto d-block" width="40" alt="..."><a
+                        class="navbar-brand" href="javascript:;"> Estoque Farmacêutico</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -62,88 +60,122 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
+                                {{--                  <a class="dropdown-item" href="#">Profile</a>--}}
+                                {{--                  <a class="dropdown-item" href="#">Settings</a>--}}
+                                {{--                  <div class="dropdown-divider"></div>--}}
+                                <a class="dropdown-item" href="{{ route('realizar.logout') }}">
+                                    <i class="material-icons">settings_power</i> Sair
+                                </a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
         <!-- End Navbar -->
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-warning card-header-icon">
-                                <div class="card-icon">
-                                    <i class="fas fa-box-open"></i>
-                                </div>
-                                <p class="card-category">Produtos Cadastrados</p>
-                                <h3 class="card-title">{{$dados['produtos']}}
-                                </h3>
+                    <div class="col-md-12">
+                        @if(session('status'))
+                            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                                <strong>{{ session('status') }}</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                             </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                    <i class="material-icons text-danger"></i>
-                                    <a href="javascript:;"></a>
-                                </div>
+                        @endif
+                        <div class="card">
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-title">Alterar</h4>
+                                <p class="card-category">Faça alterações nos dados do produto</p>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST" action="{{ route('produto.edit', ['produto' => $produto]) }}">
+                                    @csrf
+                                    @method('PUT')
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Nome Comercial</label>
+                                                <input type="text" class="form-control" name="produto_e"
+                                                       value="{{$produto->produto_e}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Princípio Ativo</label>
+                                                <input type="text" class="form-control" name="principio_ativo"
+                                                       value="{{$produto->principio_ativo}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Apresentação</label>
+                                                <input type="text" class="form-control" name="apresentacao"
+                                                       value="{{$produto->apresentacao}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Forma Farmacêutica</label>
+                                                <input type="text" class="form-control" name="forma_farmaceutica"
+                                                       value="{{$produto->forma_farmaceutica}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Concentração(%):</label>
+                                                <input type="text" class="form-control" name="concetracao"
+                                                       value="{{$produto->concentracao}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Estoque Mínimo</label>
+                                                <input type="text" class="form-control" name="estoque_minimo_e"
+                                                       value="{{$produto->estoque_minimo_e}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Quantidade</label>
+                                                <input type="text" class="form-control" name="quantidade_e"
+                                                       value="{{$produto->quantidade_e}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating">Valor Unitário (R$)</label>
+                                                <input type="text" class="form-control" name="valor_un_e"
+                                                       value="{{$produto->valor_un_e}}">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" value="0" name="tipo">
+                                    </div>
+                                    <button type="submit" class="btn btn-success pull-right">Alterar</button>
+                                    <div class="clearfix"></div>
+                                </form>
                             </div>
                         </div>
+
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-success card-header-icon">
-                                <div class="card-icon">
-                                    <i class="fas fa-file-export"></i>
-                                </div>
-                                <p class="card-category">Saídas Registradas</p>
-                                <h3 class="card-title">{{$dados['saidas']}}</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-danger card-header-icon">
-                                <div class="card-icon">
-                                    <i class="fas fa-people-carry"></i>
-                                </div>
-                                <p class="card-category">Setores Cadastrados</p>
-                                <h3 class="card-title">{{ $dados['setores'] }}</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-header card-header-info card-header-icon">
-                                <div class="card-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <p class="card-category">Fornecedores</p>
-                                <h3 class="card-title">{{$dados['fornecedores']}}</h3>
-                            </div>
-                            <div class="card-footer">
-                                <div class="stats">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
-        @include('componentes.footer')
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="copyright float-right">
+                    &copy;
+                    Reinaldo Junior Dev
+                </div>
+            </div>
+        </footer>
     </div>
 </div>
 <!--   Core JS Files   -->
@@ -357,13 +389,6 @@
 
             });
         });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-        // Javascript method's body can be found in assets/js/demos.js
-        md.initDashboardPageCharts();
-
     });
 </script>
 </body>

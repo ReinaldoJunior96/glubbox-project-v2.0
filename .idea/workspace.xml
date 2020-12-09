@@ -20,14 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34cde856-fc44-45bf-8ead-7861c0fcd428" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estoque.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/delivery-box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/document.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/fire-alone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/fogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/history.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/img-login.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/inventory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo-fire.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo-original.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/network.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/report.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/send-mail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/shopping.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/stock.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/componentes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/componentes/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/componentes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/componentes/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/farmacia/estoque.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/produto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/farmacia/produto.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -39,6 +57,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,17 +189,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\public" />
-      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views\estoque" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views\estoque" />
+      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\public" />
+      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -205,6 +232,19 @@
       <workItem from="1604489275325" duration="6381000" />
       <workItem from="1604530900265" duration="382000" />
       <workItem from="1604532603050" duration="8046000" />
+      <workItem from="1604574955802" duration="629000" />
+      <workItem from="1605275067475" duration="2670000" />
+      <workItem from="1605718907348" duration="42000" />
+      <workItem from="1606305019855" duration="13886000" />
+      <workItem from="1606387927360" duration="112000" />
+      <workItem from="1606389811150" duration="641000" />
+      <workItem from="1606402034167" duration="41000" />
+      <workItem from="1606402150915" duration="16150000" />
+      <workItem from="1606738239831" duration="17775000" />
+      <workItem from="1606820676217" duration="3893000" />
+      <workItem from="1607346097270" duration="67000" />
+      <workItem from="1607346264117" duration="656000" />
+      <workItem from="1607515059162" duration="1739000" />
     </task>
     <servers />
   </component>
@@ -222,39 +262,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="508" y="33" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604494462535">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="508" y="33" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1604494462535" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604531287374">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604531287374" />
-    <state width="1493" height="204" key="GridCell.Tab.0.bottom" timestamp="1603893202184">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
-    <state width="1493" height="204" key="GridCell.Tab.0.center" timestamp="1603893202184">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
-    <state width="1493" height="204" key="GridCell.Tab.0.left" timestamp="1603893202183">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603893202183" />
-    <state width="1493" height="204" key="GridCell.Tab.0.right" timestamp="1603893202184">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603893202184" />
-    <state x="604" y="332" key="NewPhpFileDialog" timestamp="1604412688924">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="604" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604412688924" />
-    <state x="311" y="7" key="SettingsEditor" timestamp="1603931784403">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="311" y="7" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603931784403" />
   </component>
 </project>

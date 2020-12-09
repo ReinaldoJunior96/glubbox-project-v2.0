@@ -25,21 +25,23 @@ Route::get('/logout', [AuthController::class, 'logoutUser'])->name('realizar.log
 /* dashboard retornando dados*/
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
-/* Estoque rotas */
-Route::prefix('estoque')->group(function(){
-    Route::get('farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('view.estoque.farmacia')->middleware('auth');
-    Route::get('diversos', [EstoqueController::class, 'estoqueDiversos'])->name('view.estoque.diversos')->middleware('auth');
-    Route::get('produto/{produto}', [EstoqueController::class, 'editProduto'])->name('produto.view')->middleware('auth');
+
+Route::prefix('estoque')->group(function () {
+    /* Routas para views estoque */
+    Route::get('cadastro', [EstoqueController::class, 'estoqueCadastro'])->name('cad.estoque')->middleware('auth');
+    Route::get('farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('estoque.farmacia')->middleware('auth');
+    Route::get('almoxarifado', [EstoqueController::class, 'estoqueAlmoxarifado'])->name('estoque.almoxarifado')->middleware('auth');
+    Route::get('produto/{produto}', [EstoqueController::class, 'editProduto'])->name('estoque.produto')->middleware('auth');
+    /* Routas para post put delete estoque */
+    Route::post('cadastro', [EstoqueController::class, 'cadProduto'])->name('cad.produto')->middleware('auth');
+    Route::put('/produto/{produto}', [EstoqueController::class, 'altProduto'])->name('alt.produto')->middleware('auth');
+    Route::delete('/produto/{produto}', [EstoqueController::class, 'remProduto'])->name('rem.produto')->middleware('auth');
 });
 
 
 
+/* CRUD estoque*/
 
-
-Route::post('/estoqueFarmacia/farmacia', [EstoqueController::class, 'novoProdutoFarmacia'])->name('produto.faramacia.cadastro');
-Route::post('/estoqueFarmacia/estoqueDiversos', [EstoqueController::class, 'novoProdutoDiversos'])->name('produto.estoqueDiversos.cadastro');
-Route::put('/estoqueFarmacia/produto/{produto}', [EstoqueController::class, 'alterarProduto'])->name('produto.edit');
-Route::delete('/estoqueFarmacia/produto/{produto}', [EstoqueController::class, 'removerProduto'])->name('produto.delete');
 /*
  *=====================================================*
 */

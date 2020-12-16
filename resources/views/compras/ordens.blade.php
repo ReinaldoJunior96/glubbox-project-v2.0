@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="../../../public/assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>
-        Material Dashboard by Creative Tim
+        Gluub Box
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport'/>
     <!--     Fonts and icons     -->
@@ -17,24 +17,21 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{ asset('assets/demo/demo.css')  }}" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
+    <link rel="stylesheet" href="{{ asset('assets/css/gluubstyle.css') }}">
     <style>
-        #parte {
-            display: none;
-        }
-    </style>
 
+    </style>
 </head>
 
 <body class="">
 <div class="wrapper ">
-
     @include('componentes.menu');
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;"> Estoque Farmacêutico</a>
+                    <a class="navbar-brand" href="javascript:;"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -67,9 +64,6 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                {{--                  <a class="dropdown-item" href="#">Profile</a>--}}
-                                {{--                  <a class="dropdown-item" href="#">Settings</a>--}}
-                                {{--                  <div class="dropdown-divider"></div>--}}
                                 <a class="dropdown-item" href="{{ route('realizar.logout') }}">
                                     <i class="material-icons">settings_power</i> Sair
                                 </a>
@@ -85,132 +79,109 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        @if(session('status'))
-                            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-                                <strong>{{ session('status') }}</strong>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        @endif
                         <div class="card">
                             <div class="card-header card-header-primary">
-                                <h4 class="card-title">Cadastro</h4>
-                                <p class="card-category">Área para cadastro de produtos e materiais </p>
+                                <h4 class="card-title">Ordens de compra</h4>
+                                <p class="card-category">Cadastro e Visualização de ordens de compra</p>
                             </div>
                             <div class="card-body">
-                                <form method="POST" action="{{route('produto.faramacia.cadastro')}}">
+                                <form method="POST" action="{{ route('cad.ordem') }}">
                                     @csrf
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Nome Comercial</label>
-                                                <input type="text" class="form-control" name="produto_e">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Fornecedores</label>
+                                            <select class="form-control" data-style="btn btn-link"
+                                                    id="exampleFormControlSelect1" name="fornecedor">
+                                                <option selected></option>
+                                                @if(isset($dados))
+                                                    @foreach($dados['fornecedores'] as $f)
+                                                        <option>{{ $f->nome_fornecedor }}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select>
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-radio">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="tipo"
+                                                                   id="exampleRadios2" value="0">
+                                                            Nota Fiscal
+                                                            <span class="circle">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Princípio Ativo</label>
-                                                <input type="text" class="form-control" name="principio_ativo">
+                                            <div class="col-md-1">
+                                                <div class="form-group">
+                                                    <div class="form-check form-check-radio">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio"
+                                                                   name="tipo"
+                                                                   id="exampleRadios2" value="material">
+                                                            Nota de Entrega
+                                                            <span class="circle">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <input type="hidden" value="{{ $hoje = date('Y/m/d') }}" name="data">
+                                            <input type="hidden" value="{{ $hoje = date('Y/m/d') }}" name="data">
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Apresentação</label>
-                                                <input type="text" class="form-control" name="apresentacao">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Forma Farmacêutica</label>
-                                                <input type="text" class="form-control" name="forma_farmaceutica">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Concentração(%):</label>
-                                                <input type="text" class="form-control" name="concentracao">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Estoque Mínimo</label>
-                                                <input type="text" class="form-control" name="estoque_minimo_e">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Quantidade</label>
-                                                <input type="text" class="form-control" name="quantidade_e">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="bmd-label-floating">Valor Unitário (R$)</label>
-                                                <input type="text" class="form-control" name="valor_un_e">
-                                            </div>
-                                        </div>
-                                        <input type="hidden" value="0" name="tipo">
-                                    </div>
-                                    <button type="submit" class="btn btn-success pull-right">Cadastrar</button>
-                                    <div class="clearfix"></div>
+                                    <button type="submit" class="btn btn-success">Cadastrar</button>
                                 </form>
-                            </div>
-                            <hr>
-                            <div class="col-md-12" id="parte">
-                                <div class="card card-plain">
-                                    <div class="card-header card-header-primary">
-                                        <h4 class="card-title mt-0">Produto & Materiais</h4>
-                                        {{--                                <p class="card-category"> Here is a subtitle for this table</p>--}}
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table id="example" class="table table-hover text-md-center">
-                                                <thead class="">
-                                                <th>
-                                                    Nome Comercial
-                                                </th>
-                                                <th>
-                                                    Quantidade
-                                                </th>
-                                                <th>
-                                                </th>
-                                                <th>
-
-                                                </th>
-                                                </thead>
-                                                <tbody>
-                                                @foreach($produtos as $p)
-                                                    <tr>
-                                                        <td>{{ $p->produto_e }}</td>
-                                                        <td>{{ $p->quantidade_e}}</td>
-                                                        <td>
-                                                            <button type="button" rel="tooltip" title="Editar Produto"
-                                                                    class="btn btn-primary btn-link btn-sm">
-                                                                <a href="{{ route('produto.view', ['produto' => $p->id_estoque]) }}"><i
-                                                                        class="material-icons">edit</i></a>
-                                                            </button>
-                                                        </td>
-                                                        <td>
-                                                            <form action="{{ route('produto.delete', ['produto' => $p->id_estoque]) }}" method="POST">
-                                                                @csrf
-                                                                @method('delete')
-                                                                <button type="submit" rel="tooltip"
-                                                                        title="Deleter Produto"
-                                                                        class="btn btn-danger btn-link btn-sm">
-                                                                    <i class="material-icons">close</i>
-                                                                </button>
-                                                            </form>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                <div class="col-md-12" id="parte">
+                                    <div class="card card-plain">
+                                        @if(isset($dados))
+                                            <div class="card-body">
+                                                <div class="table-responsive" id="table-delay">
+                                                    <table id="example" class="table table-hover text-md-center">
+                                                        <thead class="">
+                                                        <th>Nosta Fiscal</th>
+                                                        <th> Fornecedor</th>
+                                                        <th>Criada em</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        </thead>
+                                                        <tbody>
+                                                        @foreach($dados['ordens'] as $p)
+                                                            <tr>
+                                                                <td><a href="#">{{ $p->id_fk_nf }}</a></td>
+                                                                <td><a href="#">{{ $p->nome_f }}</a></td>
+                                                                <td>{{ date('d/m/Y', strtotime($p->data_c))}}</td>
+                                                                <td>
+                                                                    <button type="button" rel="tooltip"
+                                                                            title="Editar Produto"
+                                                                            class="btn btn-primary btn-link btn-sm">
+                                                                        <a href="{{ route('estoque.produto', ['produto' => $p->id_ordem]) }}"><i
+                                                                                class="material-icons">edit</i></a>
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <form
+                                                                        action="{{ route('rem.produto', ['produto' => $p->id_ordem]) }}"
+                                                                        method="POST">
+                                                                        @csrf
+                                                                        @method('delete')
+                                                                        <button type="submit" rel="tooltip"
+                                                                                title="Deleter Produto"
+                                                                                class="btn btn-danger btn-link btn-sm">
+                                                                            <i class="material-icons">close</i>
+                                                                        </button>
+                                                                    </form>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -468,7 +439,7 @@
 </script>
 <script>
     $(document).ready(function () {
-        $('#parte').fadeIn("slow").css("display", "block");
+        $('#table-delay').fadeIn("slow").css("display", "block");
     })
 </script>
 </body>

@@ -147,17 +147,34 @@
                                             </div>
                                         </div>
                                         <!--<input type="hidden" value="0" name="tipo">-->
-                                        <div class="col-md-12">
+                                        <div class="col-md-1">
                                             <div class="form-group">
-                                                <label class="bmd-label-floating">Selecione o estoque</label>
-                                                <select class="form-control" name="tipo" required>
-                                                    <option selected></option>
-                                                    <option value="0">O produto será adicionado no estoque da FARMÁCIA
-                                                    </option>
-                                                    <option value="material">O produto será adicionado no estoque do
-                                                        ALMOXARIFADO
-                                                    </option>
-                                                </select>
+                                                <div class="form-check form-check-radio">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="tipo"
+                                                               id="exampleRadios2" value="0">
+                                                        Farmácia
+                                                        <span class="circle">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="form-group">
+                                                <div class="form-check form-check-radio">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="tipo"
+                                                               id="exampleRadios2" value="material">
+                                                        Almoxarifado
+                                                        <span class="circle">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

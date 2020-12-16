@@ -39,7 +39,7 @@
             </li>
             <hr>
             <li class="nav-item ">
-                <a class="nav-link" href="{{ route('cad.estoque') }}">
+                <a class="nav-link" href="{{ route('compras.ordens') }}">
                     <i class="material-icons text-primary">local_mall</i>
                     <p>Compras</p>
                 </a>

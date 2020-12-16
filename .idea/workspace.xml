@@ -20,33 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34cde856-fc44-45bf-8ead-7861c0fcd428" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstoqueController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Estoque.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estoque.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/delivery-box.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/document.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/fire-alone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/fire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/fogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/history.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/img-login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/inventory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo-fire.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo-original.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/mail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/network.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/report.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/send-mail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/shopping.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/stock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/componentes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/componentes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/almoxarifado/estoque.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/componentes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/componentes/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/estoque.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/farmacia/estoque.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/estoqueFarmacia/produto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/farmacia/produto.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/estoque/cadProduto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/estoque/cadProduto.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/farmacia/estoque.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/farmacia/produto.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +171,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../generic-box-g" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -196,6 +179,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\app\Models" />
+      <recent name="C:\xampp\htdocs\glubbox-project-v2.0\app\Http\Controllers" />
       <recent name="C:\xampp\htdocs\glubbox-project-v2.0\resources\views\estoque" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -244,7 +229,8 @@
       <workItem from="1606820676217" duration="3893000" />
       <workItem from="1607346097270" duration="67000" />
       <workItem from="1607346264117" duration="656000" />
-      <workItem from="1607515059162" duration="1739000" />
+      <workItem from="1607515059162" duration="16446000" />
+      <workItem from="1608038500194" duration="786000" />
     </task>
     <servers />
   </component>

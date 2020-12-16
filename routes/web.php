@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{EstoqueController, AuthController};
+use App\Http\Controllers\{EstoqueController, AuthController, ComprasController};
 
 /*
 |--------------------------------------------------------------------------
@@ -31,12 +31,23 @@ Route::prefix('estoque')->group(function () {
     Route::get('cadastro', [EstoqueController::class, 'estoqueCadastro'])->name('cad.estoque')->middleware('auth');
     Route::get('farmacia', [EstoqueController::class, 'estoqueFarmacia'])->name('estoque.farmacia')->middleware('auth');
     Route::get('almoxarifado', [EstoqueController::class, 'estoqueAlmoxarifado'])->name('estoque.almoxarifado')->middleware('auth');
-    Route::get('produto/{produto}', [EstoqueController::class, 'editProduto'])->name('estoque.produto')->middleware('auth');
+    Route::get('produto/{produto}', [EstoqueController::class, 'viewProduto'])->name('estoque.produto')->middleware('auth');
     /* Routas para post put delete estoque */
     Route::post('cadastro', [EstoqueController::class, 'cadProduto'])->name('cad.produto')->middleware('auth');
     Route::put('/produto/{produto}', [EstoqueController::class, 'altProduto'])->name('alt.produto')->middleware('auth');
     Route::delete('/produto/{produto}', [EstoqueController::class, 'remProduto'])->name('rem.produto')->middleware('auth');
 });
+
+Route::prefix('compras')->group(function () {
+    Route::get('ordens', [ComprasController::class, 'viewOrdens'])->name('compras.ordens')->middleware('auth');
+    Route::get('nota-fiscal', [ComprasController::class, 'viewNFs'])->name('compras.notaf')->middleware('auth');
+    Route::get('ordem/{ordem}', [ComprasController::class, 'editOrdem'])->name('compras.notaf')->middleware('auth');
+
+    /* Routas para post put delete estoque */
+    Route::post('ordem', [ComprasController::class, 'cadOrdem'])->name('cad.ordem')->middleware('auth');
+
+});
+
 
 
 

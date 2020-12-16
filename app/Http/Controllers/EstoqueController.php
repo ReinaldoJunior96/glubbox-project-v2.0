@@ -19,7 +19,7 @@ class EstoqueController extends BaseController
         return view('estoque.cadProduto');
     }
 
-    public function cadProduto(Estoque $prod, Request $request)
+    public function cadProduto(Estoque $prod, Request $request): \Illuminate\Http\RedirectResponse
     {
         $prod->produto_e = $request->produto_e;
         $prod->quantidade_e = $request->quantidade_e;
@@ -30,11 +30,13 @@ class EstoqueController extends BaseController
         $prod->forma_farmaceutica = $request->forma_farmaceutica;
         $prod->principio_ativo = $request->principio_ativo;
         $prod->tipo = $request->tipo;
+        $prod->timestamps = false;
         if ($prod->save() == true) {
-            return redirect()->route('cad.estoque')->with('status', 'Produto cadastrado com sucesso!!');
+            $result = redirect()->route('cad.estoque')->with('status', 'Produto cadastrado com sucesso!!');
         } else {
-            return redirect()->route('cad.estoque')->with('status', 'Erro ao cadastrar produto.');
+            $result = redirect()->route('cad.estoque')->with('status', 'Erro ao cadastrar produto.');
         }
+        return $result;
     }
 
     public function estoqueFarmacia()
@@ -55,12 +57,12 @@ class EstoqueController extends BaseController
         return view('estoque.prodAlmoxarifado', ['produtos' => $produtos]);
     }
 
-    public function altProduto($id)
+    public function viewProduto($id)
     {
         return view('estoque.editProduto', ['produto' => Estoque::find($id)]);
     }
 
-    public function alterarProduto($prod, Request $request)
+    public function altProduto($prod, Request $request): \Illuminate\Http\RedirectResponse
     {
         $prodEdit = Estoque::find($prod);
         $prodEdit->produto_e = $request->produto_e;
@@ -72,6 +74,7 @@ class EstoqueController extends BaseController
         $prodEdit->forma_farmaceutica = $request->forma_farmaceutica;
         $prodEdit->principio_ativo = $request->principio_ativo;
         $prodEdit->tipo = $request->tipo;
+        $prod->timestamps = false;
         if ($prodEdit->save() == true) {
             return redirect()->route('produto.view', ['produto' => $prod])->with('status', 'Produto alterado com sucesso!!');
         } else {
@@ -80,7 +83,7 @@ class EstoqueController extends BaseController
     }
 
 
-    public function remProduto($produto)
+    public function remProduto($produto): \Illuminate\Http\RedirectResponse
     {
         $search = Estoque::find($produto);
         Estoque::destroy($produto);
